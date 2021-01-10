@@ -1,0 +1,161 @@
+.card{
+    perspective: 150rem;
+    -moz-pespective: 150rem;
+    position: relative;
+    height: 70rem;
+
+    &_side{
+        color: white;
+        font-size: 2rem;
+        
+        height: 70rem;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(#000000, .15);
+        
+        &__front{
+            background-color: white;
+        }
+        
+        &__back{
+            background-color: green;
+            transform: rotateY(180deg);
+        
+            &-1{
+                background-image: linear-gradient(to right bottom, #00737d, #00737d);
+            }
+            
+            &-2{
+                background-image: linear-gradient(to right bottom, #21a58a, #21a58a);
+            }
+            
+            &-3{
+                background-image: linear-gradient(to right bottom,  #1d4354,  #1d4354);
+            }
+        }
+        
+    }
+    
+    
+    &:hover &_side__front{
+        transform: rotateY(-180deg);
+        
+    }
+    
+    &:hover &_side__back{
+        transform: rotateY(0);
+        
+    }
+    
+    //Front
+    &_picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0,100% 0,0 85%,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+        
+            
+        &--1{
+            background-image: linear-gradient(to right bottom, #00737d, #00737d), url(../img/IMG_2068.JPEG);
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, #21a58a, #21a58a), url(../img/IMG_1905.JPEG);
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, #1d4354,  #1d4354), url(../img/IMG_1198.JPEG);
+        }
+    }
+    
+    &_heading{
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 75%;
+        
+    }
+    
+    &_heading-span{
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba(#00737d, .85), rgba(#00737d, .85));
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba(#21a58a, .85), rgba(#21a58a, .85));
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, rgba(#1d4354, .85), rgba( #1d4354, .85));
+        }
+    }
+    
+    
+    &_details{
+        padding: 3rem;
+        color: black;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+                &:not(last-child){
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+    }
+    
+    //back
+    &_cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    
+    &_price-box{
+        text-align: center;
+        margin-bottom: 8rem;
+        color: white;
+    }
+    
+    &_price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        
+    }
+    
+    &_price-value{
+        font-size: 6rem;
+        font-weight: 100;
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
